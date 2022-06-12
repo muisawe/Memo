@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Twitter Clone | Mi</title>
+</head>
+<body>
+        <header>
+            <div></div>
+            <i class="fab fa-twitter logo" ></i>
+                <hgroup>
+                    <h2>Twitter 1998</h2>
+                </hgroup>
+                <!-- search bar -->
+                <div   style="margin-top: 20px;" >
+                <input type="text" placeholder="Search here" class="search-field">
+                <button class="btn">
+                <i class="fa fa-search" aria-hidden="true" style="padding: 5px;"></i>
+                </button>
+                
+
+                </div>
+             <div></div>
+        </header>
+        <main>
+            <div class="left-side"     >
+                <div class="btn"><i class="fal fa-home"></i> Home</div>
+                <div class="btn"><i class="fal fa-user"></i> Profile</div>
+                <div class="btn"><i class="fal fa-expand-arrows"></i> Discover</div>
+                <div class="btn"><i class="fal fa-bell"></i> Notification</div>
+                <div class="btn"><i class="fal fa-envelope"></i> Messages</div>
+                <div class="btn"><i class="fal fa-bookmark"></i> Bookmarks</div>
+                <div class="btn"><i class="fal fa-list-alt"></i> Lists</div>
+                <div class="btn"><i class="fal fa-ellipsis-h"></i> More</div>
+                <div class="btn" style="text-align: center; font-weight: bold;">Tweet</div>
+            </div>
+            <div class="center-side">
+                    <div class="card "  >
+                        <div class="create-tweet">
+                         <img src="./img/avatar.jpeg" alt="No user Image Found" class="avatar">
+                          <div style="margin-top: 10px; width: 100%; ">
+                            <form action="">
+                             <textarea   maxlength="200"  id="tweet"  placeholder="What’s happening?"></textarea>
+                             <input type="text" id="name" placeholder="name">
+                            </form>
+                          </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; ">
+                           <div class="create-tweet-items" style="    grid-column: span 3;">
+                                 
+                                <div class="btn create-tweet-item"  >
+                                    <i class="fal fa-image fa-center"  ></i>
+                                </div>
+                                <div class="btn create-tweet-item" >
+                                    <i class="fal fa-grin-beam fa-center"></i>
+                                </div>
+                                <div class="btn create-tweet-item">
+                                        <i class="fal fa-calendar-alt fa-center"></i>
+                                </div>
+                                <div class="btn create-tweet-item">
+                                    <i class="fal fa-video fa-center"></i>
+                                </div>
+                                <div class="btn create-tweet-item">
+                                    <i class="fal fa-map-marker-smile fa-center" style="left: 25%;"></i>
+                                </div>
+                                 
+                                      
+                           </div> 
+                                <div class="btn tweet-btn" id="tweetBtn" onclick="">Tweet</div>
+                        </div>
+                    </div>
+                    <div class="tweetfeed" id="tweetfeed" style="display: flex; margin-top:50px; flex-direction: column; gap: 20px;">
+                        <div class="tweet card" style="width: 90%; height: 210px; padding: 15px;" id="0">
+                            <div class="create-tweet">
+                                <img src="./img/avatar.jpeg" alt="No user Image Found" class="avatar">
+                                 <div style="margin-top: 10px; width: 100%; ">
+                                        <hgroup style="display: flex;flex-direction:row;">
+                                            <h3 style="margin: 0;" id="name-0">ملك خبية</h3>
+                                            <h3  style="margin: 0 0 0 5px; color: gray;">@ملك خبية</h4>
+                                        </hgroup>
+                                     
+                                        <p id="tweet-0"> 
+                                        لأن دربَ الحياةِ طويلٌ غامضٌ أمامنا… ولأنّ الأفراحَ فيه لا تنتظرُ الكسالى.. ولأن الأحزانَ فيها لا تستحقّ أن نتعثّرَ وقتاً أطول.. ولأن السخرية من البؤس هي أقصى درجات النضج ..فتعال… تعال نذهبُ إلى مكانٍ بعيد نسخرُ من ظلالنا الطويلة….ونضحكُ على جدّيّةِ العالم
+                                     </p>
+                                    
+                                 </div>
+                                 
+                               </div>
+                               <div style="display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; ">
+                                <div class="create-tweet-items" style="    grid-column: span 3;">
+                                     
+                                    <div class="btn create-tweet-item" > 
+                                        <i class="fal fa-heart  fa-center" id= "like-0"    onclick="onLikeBtnPressed(this)"></i>
+                                    </div>
+
+                                     <div class="btn create-tweet-item"  id= "retweet-0" onclick="onRetweetBtnPressed(this)">
+                                        <i class="fal fa-retweet-alt fa-center"></i>
+                                     </div>
+                                     
+                                 
+                                      
+                                           
+                                </div> 
+                                      
+                             </div>
+                               
+                        </div>
+                     
+                    </div>
+
+
+
+            </div>
+            <div class="right-side"  >
+                <div class="card">
+            <hgroup>
+                <h2>Trends for your</h2>
+            </hgroup>
+                <div class="trend-list"  >
+                    <p class="trend-item-title">Football</p>
+                    <p class="trend-item-word">Zinadine Zidane</p>
+                    <p class="trend-item-count">10,2 B Tweet</p>
+                </div>
+                <div class="trend-list"  >
+                    <p class="trend-item-title">England</p>
+                    <p class="trend-item-word"> Londra</p>
+                    <p class="trend-item-count">1,7 B Tweet</p>
+                </div>
+                <div class="trend-list"  >
+                    <p class="trend-item-title">Sport</p>
+                    <p class="trend-item-word">Galatasaray</p>
+                    <p class="trend-item-count">23 B Tweet</p>
+                </div>
+                <div class="trend-list"  >
+                    <p class="trend-item-title">Music</p>
+                    <p class="trend-item-word">Mettalica</p>
+                    <p class="trend-item-count">176 B Tweet</p>
+                </div>
+                <div class="trend-list"  >
+                    <p class="trend-item-title">Series</p>
+                    <p class="trend-item-word">Dawson’s Creek</p>
+                    <p class="trend-item-count">2 B Tweet</p>
+                </div>
+                </div>
+                <div class="card">
+                    <hgroup>
+                        <h2>Who to follow</h2>
+                    </hgroup>
+                    <div class="follow-list">
+                        <img src="./img/avatar.jpeg" alt="No user Image Found" class="avatar follow-avatar">
+                        <div class="follow-info">
+                            <p class="trend-item-word" >Moumen Alisawe</p>
+                            <p class="trend-item-title">@muisawe</p>
+                        </div>
+                        <div class="btn follow-btn">
+                            <p>follow</p>
+                            
+                        </div>
+                    </div>
+                    <div class="follow-list">
+                        <img src="./img/avatar.jpeg" alt="No user Image Found" class="avatar follow-avatar">
+                        <div class="follow-info">
+                            <p class="trend-item-word" >Mr Swift</p>
+                            <p class="trend-item-title">@swift</p>
+                        </div>
+                        <div class="btn follow-btn">
+                            follow
+                        </div>
+                    </div>
+                    <div class="follow-list">
+                        <img src="./img/avatar.jpeg" alt="No user Image Found" class="avatar follow-avatar">
+                        <div class="follow-info">
+                            <p class="trend-item-word" >Ali Ahmed</p>
+                            <p class="trend-item-title">@max2020</p>
+                        </div>
+                        <div class="btn follow-btn">
+                            follow
+                        </div>
+                    </div>
+                    <div class="follow-list">
+                        <img src="./img/avatar.jpeg" alt="No user Image Found" class="avatar follow-avatar">
+                        <div class="follow-info">
+                            <p class="trend-item-word" >GSG</p>
+                            <p class="trend-item-title">@gaza_sky_geeks</p>
+                        </div>
+                        <div class="btn follow-btn">
+                            follow
+                        </div>
+                    </div>
+
+                    </div>
+        </div>
+        </main>
+
+        <footer>
+
+        </footer>
+
+
+        <script   src="./js/app.js"></script>
+        <script>
+            // alert('I can design a website more professionaly but you mentioned that "but try to come up with something unique and fun! "');
+            var currentId = 1; 
+
+            document.getElementById("tweetBtn").addEventListener("click", function(){
+                 
+                let tweet = document.getElementById("tweet").value;
+                let name = document.getElementById("name").value;
+                
+                if(tweet.length == 0 || name.length == 0){
+                alert('tweet name or content is empty');
+                 return;
+                }else{
+                    // const tweet = ;
+                    // console.log(tweet);
+                    createAndInsertNewRetweet(currentId,tweet, name);
+                    // createNewTweet(tweet,name);
+                    document.getElementById("name").value = "";
+                    document.getElementById("tweet").value = "";
+                    currentId++;
+                }
+                     
+            });
+       
+
+            const onLikeBtnPressed = (element) => {
+                 
+                if (element.classList.contains("fas")){
+                    element.classList.remove("fas");
+                    element.classList.add("fal");
+                }else{
+                    element.classList.remove("fal");
+                    element.classList.add("fas");
+                }
+            }
+            const onRetweetBtnPressed = (element) => {
+              
+                const tweetId = element.id.split("-")[1];
+                 
+                 const name = document.getElementById(`name-${tweetId}`).innerText;
+                 const tweet = document.getElementById(`tweet-${tweetId}`).innerText;
+                // console.log(name);
+                this.createAndInsertNewRetweet(currentId,name, tweet);
+                currentId++;
+            }
+
+        </script>
+</body>
+</html>
